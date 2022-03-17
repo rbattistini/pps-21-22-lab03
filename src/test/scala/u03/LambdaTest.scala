@@ -1,7 +1,7 @@
 package u03
 
 abstract class LambdaTest:
-  import Lambda.*
+  import u03.Lambda.*
 
   def toBoolean(l: L): Boolean =
     val l1: L = x => x

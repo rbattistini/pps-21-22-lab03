@@ -2,10 +2,10 @@ package u02
 
 import org.junit.*
 import org.junit.Assert.*
-import BTrees.Tree.*
+import u02.BTrees.Tree.*
 
 class BinaryTreesTest {
-  val tree = Branch(Branch(Leaf(1), Leaf(2)), Leaf(1))
+  private val tree = Branch(Branch(Leaf(1), Leaf(2)), Leaf(1))
 
   @Test def testCount(): Unit = {
     assertEquals(2, count(tree, 1))

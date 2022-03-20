@@ -47,4 +47,10 @@ object Streams extends App:
     def constant[A](value: A): Stream[A] =
       cons(value, constant(value))
 
+    def fibs: Stream[Int] = Stream.map(
+      Stream.iterate(
+        (0, 1)
+      )((a, b) => (b, a + b))
+    )((a, b) => a)
+
   end Stream

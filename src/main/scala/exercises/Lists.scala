@@ -36,8 +36,7 @@ object Lists extends App:
     @tailrec
     def drop[A](l: List[A], n: Int): List[A] = l match
       case Cons(h, t) if n > 0 => drop(t, n - 1)
-      case Cons(h, t) => l
-      case Nil() => Nil()
+      case _ => l
 
     def append[A](left: List[A], right: List[A]): List[A] = left match
       case Cons(h, t) => Cons(h, append(t, right))

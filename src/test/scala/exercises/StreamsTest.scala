@@ -25,5 +25,5 @@ class StreamsTest:
   @Test def testFibonacci(): Unit =
     assertEquals(
       Cons(0, Cons(1, Cons(1, Cons(2, Cons(3, Cons(5, Cons(8, Cons(13, Nil())))))))),
-      Stream.toList(Stream.take(fibs)(8))
+      Stream.toList(Stream.take(fibs())(8))
     )
